@@ -6,7 +6,10 @@
     <Product>Official .NET SDK for Authorize.Net</Product>
     <Copyright>Copyright © Visa Inc 2018</Copyright>
     <Authors>Visa Inc</Authors>
+    <VersionSuffix>$(VersionSuffix)</VersionSuffix>
     <Version>2.0.2</Version>
+    <Version Condition=" '$(VersionSuffix)' != '' ">$(Version)-$(VersionSuffix)</Version>
+    <PackageId>AuthorizeNet.Fork.NetStandard</PackageId>
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="Api\Controllers\createFingerPrintController.cs" />
